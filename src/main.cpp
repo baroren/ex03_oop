@@ -35,7 +35,7 @@ int main()
 
 
 	Poly p2,p1 ;
-    p1=5*p;
+    p1=p3-p;
 
 	cout << -p;
 }
