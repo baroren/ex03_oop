@@ -3,6 +3,7 @@
 #include <iostream>
 
 using std::cout;
+using std::endl;
 
 //c-tor for array of rationals
 Poly::Poly(const std::vector<Rational> &rationals) : m_theData(rationals) {}
@@ -60,11 +61,12 @@ std::ostream& operator<<(std::ostream& output, const Poly& poly)
     for (int i = 0; i < dataSize; i++)
     {
         if (poly.getExpo(i) == 0)
-            cout << poly.getRational(i);
+            cout << poly.getRational(i) << ' ';
         else
             cout << poly.getRational(i) << "*X^"  << poly.getExpo(i) << ' ' << "+ ";
     }
         
+    cout << endl;
     return output;
 }
 int Poly::deg()const
@@ -120,10 +122,12 @@ Poly &Poly :: operator*=(const Poly& right)
     this->m_theData = this->m_theData * right.m_theData;
     return *this;
 }
+
 Poly operator-(const Poly& left,const Poly& right)
 {
     return (left + (-1) * right);
     }
+}
 Poly operator*(const Poly& left, const int num)
 {
     Poly newPoly(num);
@@ -138,3 +142,12 @@ Poly operator*(const int num, const Poly& left)
 
     return newPoly;
 }
+
+
+Poly& Poly::operator- ()
+{
+    -m_theData;
+
+    return *this;
+}
+

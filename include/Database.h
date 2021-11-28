@@ -24,7 +24,10 @@ public:
     void setHead(List*&,int size);
 
     Database& operator=(const Database right);
-    
+
+    Database& operator *(const Database right);
+    Database& operator-();
+
    // void plusAddList(List*&temp);
 
 
