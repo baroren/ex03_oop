@@ -235,6 +235,19 @@ List* Database::getHead()const
 {
 	return m_head;
 }
+
+Database& Database::operator-()
+{
+	List* node = m_head;
+	while (node != NULL)
+	{
+		-node->rat;
+		node = node->next;
+	}
+
+	return *this;
+}
+
 Database& Database::operator=(const Database right)
 {
 	if(m_head!=NULL)

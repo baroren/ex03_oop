@@ -29,6 +29,8 @@ public:
 
    Poly &operator=(const Poly &);
 
+   Poly& operator-();
+
     Poly& operator+=( const Poly&);
     Poly& operator*=( const Poly&);
 

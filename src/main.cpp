@@ -20,17 +20,15 @@ int main()
 	//cout << (number == number1);
 
 
-	auto rationals = std::vector<Rational> {  Rational(5,1), Rational(), Rational(17,2)};
+	auto rationals = std::vector<Rational> {  Rational(-5,1), Rational(), Rational(17,2)};
 
 	auto rationals2 = std::vector<Rational>{ Rational(5,1), Rational(3,3) };
 
 
-	Poly p(rationals),p3(rationals2);
+	Poly p(rationals);
 
 	//cout << p << endl;
 
-	Poly p2,p1 ;
-    p1=p*p ;
 
-	cout << p1;
+	cout << -p;
 }

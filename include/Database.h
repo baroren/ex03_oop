@@ -25,6 +25,7 @@ public:
 
     Database& operator=(const Database right);
     Database& operator *(const Database right);
+    Database& operator-();
    // void plusAddList(List*&temp);
 
 
