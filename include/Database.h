@@ -24,8 +24,10 @@ public:
     void setHead(List*&,int size);
 
     Database& operator=(const Database right);
+
     Database& operator *(const Database right);
     Database& operator-();
+
    // void plusAddList(List*&temp);
 
 
@@ -38,5 +40,5 @@ private:
     List* nodeAllocate(const int expo, const Rational& rat);
 };
 Database operator+ (const Database&, const Database&);
-
+Database operator *(const Database& ,const Database&right);
 

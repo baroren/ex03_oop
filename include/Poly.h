@@ -27,7 +27,7 @@ public:
 
     Rational getRational(int) const;
 
-   Poly &operator=(const Poly &);
+    Poly &operator=(const Poly &);
 
    Poly& operator-();
 
@@ -51,7 +51,8 @@ Poly operator+(const Poly&, const Poly&);
 Poly operator-(const Poly&,const Poly& );
 
 Poly operator*(const Poly&,const Poly&);
-
+Poly operator*(const Poly&,const int);//p*5
+Poly operator*(const int num, const Poly& left);//5*p
 
 //Poly& operator-=(Poly &,const Poly &);
 
